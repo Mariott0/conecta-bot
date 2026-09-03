@@ -69,7 +69,7 @@ Se um teste obrigatório não puder ser executado, registrar explicitamente a li
 
 ## FASE 1 — Fundação
 
-### [ ] TASK 01 — Inicializar projeto Node.js
+### [x] TASK 01 — Inicializar projeto Node.js
 
 Objetivo:
 
@@ -106,6 +106,24 @@ Testes obrigatórios:
 - iniciar servidor;
 - chamar `/api/health`;
 - confirmar HTTP 200 e JSON esperado.
+
+Conclusão em **2026-09-03**:
+
+- inicializado o projeto Node.js com Express, Axios, SQLite, node-cron e dotenv;
+- criada a estrutura `src/` (`config`, `database`, `jobs`, `routes`, `services`, `utils`), `public/`, `data/`, `logs/` e `test/`;
+- adicionados `.gitignore`, `.env.example`, scripts de execução/teste e servidor Express com porta padrão `3100`;
+- implementado `GET /api/health` com o retorno esperado;
+- criado teste automatizado de integração para o health check.
+
+Testes executados:
+
+- `npm.cmd install`: concluído sem erro, 139 pacotes auditados e 0 vulnerabilidades;
+- `node --check` em todos os arquivos JavaScript do projeto: aprovado;
+- `npm.cmd ls --depth=0`: dependências instaladas e árvore válida;
+- `npm.cmd test`: 1 teste aprovado, 0 falhas;
+- `npm.cmd start`: servidor iniciado corretamente na porta padrão `3100`;
+- `Invoke-WebRequest http://127.0.0.1:3100/api/health`: HTTP 200, JSON `{"status":"ok","service":"conecta-ofertas"}`;
+- `git diff --check`: aprovado.
 
 ---
 

@@ -1,0 +1,22 @@
+{
+  "name": "conecta-bot",
+  "version": "1.0.0",
+  "description": "Aplicação leve para curadoria de ofertas de marketplaces.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20.17.0"
+  },
+  "private": true,
+  "license": "UNLICENSED",
+  "dependencies": {
+    "axios": "^1.20.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "node-cron": "^4.6.0",
+    "sqlite3": "^6.0.1"
+  }
+}
